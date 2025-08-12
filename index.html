@@ -304,16 +304,12 @@
         }
 
         /* ===== CONTACTO ===== */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 4rem;
-        }
-
         .contact-info {
             display: flex;
             flex-direction: column;
             gap: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .contact-item {
@@ -337,52 +333,6 @@
 
         body.dark-mode .contact-icon {
             background: rgba(37, 99, 235, 0.2);
-        }
-
-        .contact-form {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-        }
-
-        body.dark-mode .contact-form {
-            background: #1F2937;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 2px solid #E5E7EB;
-            border-radius: 8px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        body.dark-mode .form-group input,
-        body.dark-mode .form-group textarea {
-            background: #111827;
-            border-color: #374151;
-            color: white;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
         }
 
         /* ===== FOOTER ===== */
@@ -532,6 +482,7 @@
                 <div class="nav-links">
                     <a href="#modelos">Modelo 3D</a>
                     <a href="#codes">Códigos</a>
+                    <a href="#cv">Tabla de Costos</a>
                     <a href="#contact">Contacto</a>
                 </div>
                 <button class="theme-toggle" id="themeToggle">
@@ -550,7 +501,7 @@
                 <p>Técnico Especializado en Computación con experiencia en desarrollo de sistemas, electrónica y soluciones innovadoras. Combinando lógica de programación con creatividad técnica.</p>
                 <div class="cta-buttons">
                     <a href="#codes" class="btn btn-primary">Ver códigos</a>
-                    <a href="#contact" class="btn btn-secondary">Contáctame</a>
+                    <a href="#cv" class="btn btn-secondary">Ver tabla de costos</a>
                 </div>
             </div>
         </div>
@@ -931,69 +882,41 @@ end.</code></pre>
         </div>
     </section>
 
-    <!-- ===== CONTACTO ===== -->
+    <!-- ===== INFORMACIÓN DE CONTACTO ===== -->
     <section id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Contacto</h2>
+                <h2>Información de Contacto</h2>
             </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h3>Email</h3>
-                            <p>hikerramirez32@gmail.com</p>
-                        </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h3>Teléfono</h3>
-                            <p>+52 55 5855 4479</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h3>Ubicación</h3>
-                            <p>Queretaro/México(En linea)</p>
-                        </div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>hikerramirez32@gmail.com</p>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Asunto</label>
-                            <input type="text" id="subject" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-                    </form>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h3>Teléfono</h3>
+                        <p>+52 55 5855 4479</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Ubicación</h3>
+                        <p>Queretaro/México (En linea)</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1013,15 +936,15 @@ end.</code></pre>
                     <ul style="list-style: none; margin-top: 1.5rem;">
                         <li style="margin-bottom: 0.8rem;"><a href="#" style="color: white; text-decoration: none;">Inicio</a></li>
                         <li style="margin-bottom: 0.8rem;"><a href="#modelos" style="color: white; text-decoration: none;">Modelo 3D</a></li>
-                        <li><a href="#contact" style="color: white; text-decoration: none;">Contacto</a></li>
+                        <li><a href="#cv" style="color: white; text-decoration: none;">Tabla de Costos</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3>Recursos</h3>
                     <ul style="list-style: none; margin-top: 1.5rem;">
-                        <li style="margin-bottom: 0.8rem;"><a href="#cv" style="color: white; text-decoration: none;">Tabla de Costos</a></li>
                         <li style="margin-bottom: 0.8rem;"><a href="#codes" style="color: white; text-decoration: none;">Códigos Fuente</a></li>
+                        <li><a href="#contact" style="color: white; text-decoration: none;">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -1095,18 +1018,6 @@ end.</code></pre>
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
-        
-        // Manejo del formulario de contacto
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                // Aquí iría la lógica para enviar el formulario
-                alert('¡Gracias por tu mensaje! Te responderé lo antes posible.');
-                contactForm.reset();
-            });
-        }
         
         // Crear modelo 3D con Three.js
         function create3DModel() {
